@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Wcs.Framework.Model\Wcs.Framework.Model.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="WCS\" />
+    <None Remove="System\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="WCS\" />
+    <Folder Include="System\" />
+  </ItemGroup>
+</Project>

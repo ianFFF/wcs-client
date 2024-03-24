@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Wcs.Framework.AuthenticationCenter": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "applicationUrl": "http://localhost:39929",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+	  <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NEST" Version="7.16.0" />
+    <PackageReference Include="SqlSugarCore" Version="5.1.3.30" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Wcs.Framework.Common\Wcs.Framework.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ModelsTemplate\WCS\" />
+    <None Remove="ModelsTemplate\System\" />
+    <None Remove="System\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="T4DaraContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>T4DaraContext.cs</LastGenOutput>
+    </None>
+    <None Update="T4DataContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>T4DataContext.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="T4DaraContext.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>T4DaraContext.tt</DependentUpon>
+    </Compile>
+    <Compile Update="T4DataContext.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>T4DataContext.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ModelsTemplate\WCS\" />
+    <Folder Include="ModelsTemplate\System\" />
+    <Folder Include="System\" />
+  </ItemGroup>
+</Project>

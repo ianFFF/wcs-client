@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Wcs.Framework.OcelotGateway": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "applicationUrl": "http://localhost:50983",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

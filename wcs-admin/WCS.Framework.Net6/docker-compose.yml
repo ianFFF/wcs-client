@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  Wcs.framework.apimicroservice:
+    image: ${DOCKER_REGISTRY-}yiframework
+    build:
+      context: .
+      dockerfile: Wcs.Framework.ApiMicroservice/Dockerfile

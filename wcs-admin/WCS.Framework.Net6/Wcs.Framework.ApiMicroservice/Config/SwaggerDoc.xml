@@ -1,0 +1,975 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Wcs.Framework.ApiMicroservice</name>
+    </assembly>
+    <members>
+        <member name="T:Wcs.Framework.ApiMicroservice.Controllers.BaseCrudController`1">
+            <summary>
+            Json To Sql 类比模式，通用模型
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.BaseCrudController`1.GetById(System.Int64)">
+            <summary>
+            主键查询
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.BaseCrudController`1.GetList(Wcs.Framework.Model.Query.QueryCondition)">
+            <summary>
+            列表查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.BaseCrudController`1.PageList(Wcs.Framework.Model.Query.QueryPageCondition)">
+            <summary>
+            条件分页查询
+            </summary>
+            <param name="queryCondition"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.BaseCrudController`1.Add(`0)">
+            <summary>
+            添加
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.BaseCrudController`1.Update(`0)">
+            <summary>
+            修改
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.BaseCrudController`1.DeleteList(System.Collections.Generic.List{System.Int64})">
+            <summary>
+            列表删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.BaseExcelController`1.Template">
+            <summary>
+            下载模板
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.BaseExcelController`1.Export">
+            <summary>
+            导出数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.BaseExcelController`1.Import(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            导入数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Wcs.Framework.ApiMicroservice.Controllers.BaseSimpleCrudController`1">
+            <summary>
+            Json To Sql 类比模式，通用模型
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.BaseSimpleCrudController`1.GetById(System.Int64)">
+            <summary>
+            主键查询
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.BaseSimpleCrudController`1.GetList">
+            <summary>
+            全部列表查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.BaseSimpleCrudController`1.Add(`0)">
+            <summary>
+            添加
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.BaseSimpleCrudController`1.Update(`0)">
+            <summary>
+            修改
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.BaseSimpleCrudController`1.DelList(System.Collections.Generic.List{System.Int64})">
+            <summary>
+            列表删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Wcs.Framework.ApiMicroservice.Controllers.BaseSimpleRdController`1">
+            <summary>
+            Json To Sql 类比模式，通用模型
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.BaseSimpleRdController`1.GetById(System.Int64)">
+            <summary>
+            主键查询
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.BaseSimpleRdController`1.GetList">
+            <summary>
+            全部列表查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.BaseSimpleRdController`1.DelList(System.Collections.Generic.List{System.Int64})">
+            <summary>
+            列表删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Wcs.Framework.ApiMicroservice.Controllers.AccountController">
+            <summary>
+            账户管理
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.AccountController.RestCC">
+            <summary>
+             重置管理员CC的密码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.AccountController.Login(Wcs.Framework.DTOModel.LoginDto)">
+            <summary>
+            没啥说，登录
+            </summary>
+            <param name="loginDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.AccountController.Register(Wcs.Framework.DTOModel.RegisterDto)">
+            <summary>
+            没啥说，注册
+            </summary>
+            <param name="registerDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.AccountController.Logout">
+            <summary>
+            没啥说，登出
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.AccountController.GetUserAllInfo">
+            <summary>
+            通过已登录的用户获取用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.AccountController.GetRouterInfo">
+            <summary>
+            获取当前登录用户的前端路由
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.AccountController.UpdatePassword(Wcs.Framework.DTOModel.UpdatePasswordDto)">
+            <summary>
+            自己更新密码
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.AccountController.CaptchaImage">
+            <summary>
+            验证码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.ConfigController.PageList(Wcs.Framework.Model.Models.ConfigEntity,Wcs.Framework.Common.Models.PageParModel)">
+            <summary>
+            动态条件分页查询
+            </summary>
+            <param name="dic"></param>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.DeptController.SelctGetList(Wcs.Framework.Model.Models.DeptEntity)">
+            <summary>
+            动态条件查询
+            </summary>
+            <param name="dept"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.DeptController.Add(Wcs.Framework.Model.Models.DeptEntity)">
+            <summary>
+            添加
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.DeptController.Update(Wcs.Framework.Model.Models.DeptEntity)">
+            <summary>
+            更新
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.DeptController.GetListByRoleId(System.Int64)">
+            <summary>
+            根据角色id获取该角色下全部部门
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.DictionaryController.PageList(Wcs.Framework.Model.Models.DictionaryEntity,Wcs.Framework.Common.Models.PageParModel)">
+            <summary>
+            动态条件分页查询
+            </summary>
+            <param name="dic"></param>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.DictionaryInfoController.PageList(Wcs.Framework.Model.Models.DictionaryInfoEntity,Wcs.Framework.Common.Models.PageParModel)">
+            <summary>
+            动态条件分页查询
+            </summary>
+            <param name="dicInfo"></param>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.DictionaryInfoController.GetListByType(System.String)">
+            <summary>
+            根据字典类别获取字典信息
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Wcs.Framework.ApiMicroservice.Controllers.FileController">
+            <summary>
+            文件
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.FileController.#ctor(Wcs.Framework.Interface.IFileService,Microsoft.Extensions.Hosting.IHostEnvironment,Wcs.Framework.Core.ThumbnailSharpInvoer)">
+            <summary>
+            文件上传下载
+            </summary>
+            <param name="iFileService"></param>
+            <param name="env"></param>
+            <param name="thumbnailSharpInvoer"></param>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.FileController.Get(System.Int64,System.Nullable{System.Boolean})">
+            <summary>
+            文件下载,只需用文件code即可,可选择是否为缩略图
+            </summary>
+            <param name="code"></param>
+            <param name="isThumbnail"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.FileController.Upload(System.String,Microsoft.AspNetCore.Http.IFormFileCollection,System.String)">
+            <summary>
+            多文件上传,type可空，默认上传至File文件夹下，swagger返回雪花id精度是有问题的，同时如果时图片类型，还需要进行缩略图制作
+            </summary>
+            <param name="type">文件类型，可空</param>
+            <param name="file">多文件表单</param>
+            <param name="remark">描述</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.FileController.ThumbnailSync">
+            <summary>
+            一键同步图片到缩略图
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.LogController.Add">
+            <summary>
+            自动分表，日志添加
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.LogController.GetList">
+            <summary>
+            查询近20年与21年的日志表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.LoginLogController.PageList(Wcs.Framework.Model.Models.LoginLogEntity,Wcs.Framework.Common.Models.PageParModel)">
+            <summary>
+            动态条件分页查询
+            </summary>
+            <param name="loginLog"></param>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Wcs.Framework.ApiMicroservice.Controllers.MenuController">
+            <summary>
+            菜单管理
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.MenuController.SelctGetList(Wcs.Framework.Model.Models.MenuEntity)">
+            <summary>
+            动态条件查询全部
+            </summary>
+            <param name="menu"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.MenuController.Add(Wcs.Framework.Model.Models.MenuEntity)">
+            <summary>
+            插入
+            </summary>
+            <param name="menu"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.MenuController.Update(Wcs.Framework.Model.Models.MenuEntity)">
+            <summary>
+            更新
+            </summary>
+            <param name="menu"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.MenuController.GetMenuTree">
+            <summary>
+            得到树形菜单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.MenuController.GetListByRoleId(System.Int64)">
+            <summary>
+            根据角色id获取该角色下全部菜单
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Wcs.Framework.ApiMicroservice.Controllers.OnlineController">
+            <summary>
+            在线管理
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.OnlineController.PageList(Wcs.Framework.WebCore.SignalRHub.OnlineUser,Wcs.Framework.Common.Models.PageParModel)">
+            <summary>
+            动态条件获取当前在线用户
+            </summary>
+            <param name="online"></param>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.OnlineController.ForceOut(System.String)">
+            <summary>
+            强制退出用户
+            </summary>
+            <param name="connnectionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.OperationLogController.PageList(Wcs.Framework.Model.Models.OperationLogEntity,Wcs.Framework.Common.Models.PageParModel)">
+            <summary>
+            动态条件分页查询
+            </summary>
+            <param name="operationLog"></param>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.PostController.PageList(Wcs.Framework.Model.Models.PostEntity,Wcs.Framework.Common.Models.PageParModel)">
+            <summary>
+            动态条件分页查询
+            </summary>
+            <param name="post"></param>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Wcs.Framework.ApiMicroservice.Controllers.RoleController">
+            <summary>
+            角色管理
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.RoleController.PageList(Wcs.Framework.Model.Models.RoleEntity,Wcs.Framework.Common.Models.PageParModel)">
+            <summary>
+            动态条件分页查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.RoleController.GiveRoleSetMenu(Wcs.Framework.DTOModel.GiveRoleSetMenuDto)">
+            <summary>
+            给多用户设置多角色
+            </summary>
+            <param name="giveRoleSetMenuDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.RoleController.Add(Wcs.Framework.DTOModel.RoleInfoDto)">
+            <summary>
+            添加角色包含菜单
+            </summary>
+            <param name="roleDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.RoleController.Update(Wcs.Framework.DTOModel.RoleInfoDto)">
+            <summary>
+            更新角色信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.RoleController.UpdateStatus(System.Int64,System.Boolean)">
+            <summary>
+            更改角色状态
+            </summary>
+            <param name="roleId"></param>
+            <param name="isDel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.RoleController.UpdateDataScpoce(Wcs.Framework.DTOModel.RoleInfoDto)">
+             <summary>
+            更改角色数据权限
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.RoleController.DelList(System.Collections.Generic.List{System.Int64})">
+            <summary>
+            删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Wcs.Framework.ApiMicroservice.Controllers.UserController">
+            <summary>
+            用户管理
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.UserController.PageList(Wcs.Framework.Model.Models.UserEntity,Wcs.Framework.Common.Models.PageParModel,System.Nullable{System.Int64})">
+            <summary>
+            动态条件分页查询
+            </summary>
+            <param name="user"></param>
+            <param name="page"></param>
+            <param name="deptId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.UserController.UpdateStatus(System.Int64,System.Boolean)">
+            <summary>
+            更改用户状态
+            </summary>
+            <param name="userId"></param>
+            <param name="isDel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.UserController.GiveUserSetRole(Wcs.Framework.DTOModel.GiveUserSetRoleDto)">
+            <summary>
+            给多用户设置多角色
+            </summary>
+            <param name="giveUserSetRoleDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.UserController.GetById(System.Int64)">
+            <summary>
+            通过用户id得到用户信息关联部门、岗位、角色
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.UserController.Update(Wcs.Framework.DTOModel.UserInfoDto)">
+            <summary>
+            更新用户信息
+            </summary>
+            <param name="userDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.UserController.UpdateProfile(Wcs.Framework.DTOModel.UserInfoDto)">
+            <summary>
+            更新个人中心信息
+            </summary>
+            <param name="userDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.UserController.Add(Wcs.Framework.DTOModel.UserInfoDto)">
+            <summary>
+            添加用户
+            </summary>
+            <param name="userDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.UserController.RestPassword(Wcs.Framework.Model.Models.UserEntity)">
+            <summary>
+            重置密码
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Wcs.Framework.ApiMicroservice.Controllers.TestController">
+            <summary>
+            测试控制器
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.TestController.#ctor(Microsoft.AspNetCore.SignalR.IHubContext{Wcs.Framework.WebCore.SignalRHub.MainHub},Microsoft.Extensions.Logging.ILogger{Wcs.Framework.ApiMicroservice.Controllers.TestController},Wcs.Framework.Interface.IRoleService,Wcs.Framework.Interface.IUserService,Wcs.Framework.Interface.IWcsTestService,Microsoft.Extensions.Localization.IStringLocalizer{Wcs.Framework.Language.LocalLanguage},Wcs.Framework.Core.QuartzInvoker,Wcs.Framework.Core.ThumbnailSharpInvoer,Wcs.Framework.Core.CacheInvoker)">
+            <summary>
+            依赖注入，优雅写法
+            </summary>
+            <param name="hub"></param>
+            <param name="logger"></param>
+            <param name="iRoleService"></param>
+            <param name="iUserService"></param>
+            <param name="local"></param>
+            <param name="quartzInvoker"></param>
+            <param name="thumbnailSharpInvoer"></param>
+            <param name="cacheInvoker"></param>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.TestController.PlcJob">
+            <summary>
+            PLC job test
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.TestController.PlcJobTest">
+            <summary>
+            启动一个定时任务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.TestController.PlcStopJob">
+            <summary>
+            停止任务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.TestController.DbTest">
+            <summary>
+            仓储上下文对象测试
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.TestController.SqlTest">
+            <summary>
+            执行Sql返回
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.TestController.LocalTest">
+            <summary>
+            国际化测试
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.TestController.PermissionTest">
+            <summary>
+            权限测试
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.TestController.AuthTest">
+            <summary>
+            策略授权测试
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.TestController.TranTest">
+            <summary>
+            异步事务测试
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.TestController.IncludeTest">
+            <summary>
+            极爽导航属性
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.TestController.JobTest">
+            <summary>
+            启动一个定时任务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.TestController.StopJob">
+            <summary>
+            停止任务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.TestController.TreeTest">
+            <summary>
+            树形结构构建测试
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.TestController.AuthorizeTest">
+            <summary>
+            授权测试
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.TestController.ClearDb">
+            <summary>
+            清空数据库
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.TestController.SeedDb">
+            <summary>
+            种子数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.TestController.LogTest(System.Collections.Generic.List{System.String})">
+            <summary>
+            操作日志测试
+            </summary>
+            <param name="par"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.TestController.SignalrTest(System.Int32)">
+            <summary>
+            Signalr实时推送测试
+            </summary>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.TestController.ThumbnailTest">
+            <summary>
+            缩略图测试,需要生成前及生成后的路径
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.TestController.CacheDBTest">
+            <summary>
+            缓存测试
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.TestController.CustomLogTest">
+            <summary>
+            自定义日志
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.TestController.PropertyTest">
+            <summary>
+            属性注入测试
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.EquipmentAlarmController.GetAllAlarm">
+            <summary>
+            获取所有异常类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.EquipmentAlarmController.PageList(Wcs.Framework.DTOModel.EquipmentAlarmDto,Wcs.Framework.Common.Models.PageParModel)">
+            <summary>
+            获取设备异常配置列表
+            </summary>
+            <param name="entity"></param>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.EquipmentAlarmController.Add(Wcs.Framework.Model.Models.EquipmentAlarmEntity)">
+            <summary>
+            添加
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.EquipmentAlarmController.Delete(System.Collections.Generic.List{System.String})">
+            <summary>
+            删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.EquipmentAlarmController.GetDetailById(System.String)">
+            <summary>
+            单个详情查询
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.EquipmentController.GetAllEquipments(System.String)">
+            <summary>
+            获取所有设备列表
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.EquipmentController.GetAllEquipmentsManual(System.String,System.String)">
+            <summary>
+            手工操作获取所有设备
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.EquipmentController.GetOptions">
+            <summary>
+            获取下拉条件
+            </summary>
+            <param name="entity"></param>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.EquipmentController.PageList(Wcs.Framework.Model.Models.EquipmentEntity,Wcs.Framework.Common.Models.PageParModel)">
+            <summary>
+            获取设备列表
+            </summary>
+            <param name="entity"></param>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.EquipmentController.Add(Wcs.Framework.Model.Models.EquipmentEntity)">
+            <summary>
+            添加
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.EquipmentController.Delete(System.Collections.Generic.List{System.String})">
+            <summary>
+            删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.EquipmentController.GetDetailById(System.String)">
+            <summary>
+            单个详情查询
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.EquipmentLogsController.PageList(Wcs.Framework.DTOModel.EquipmentLogsDto,Wcs.Framework.Common.Models.PageParModel)">
+            <summary>
+            获取设备日志配置列表
+            </summary>
+            <param name="entity"></param>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.EquipmentLogsController.Add(Wcs.Framework.Model.Models.EquipmentLogsEntity)">
+            <summary>
+            添加
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.EquipmentLogsController.Delete(System.Collections.Generic.List{System.String})">
+            <summary>
+            删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.EquipmentLogsController.GetDetailById(System.String)">
+            <summary>
+            单个详情查询
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.EquipmentRecordsController.PageList(Wcs.Framework.DTOModel.EquipmentRecordsDto,Wcs.Framework.Common.Models.PageParModel)">
+            <summary>
+            获取日志列表
+            </summary>
+            <param name="entity"></param>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.EquipmentRecordsController.ExportExcel(Wcs.Framework.DTOModel.EquipmentRecordsDto)">
+            <summary>
+            导出excel
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.EquipmentRecordsController.GetAlarmType">
+            <summary>
+            根据设备类型获取所有设备异常类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.EquipmentRecordsController.GetAlarmCode">
+            <summary>
+            获取所有异常编码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.ShelvesController.PageList(Wcs.Framework.Model.Models.ShelvesEntity,Wcs.Framework.Common.Models.PageParModel)">
+            <summary>
+            获取货架列表
+            </summary>
+            <param name="entity"></param>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.ShelvesController.SelctListForManual(System.String)">
+            <summary>
+            手工操作-根据设备获取关联同样设备的货架
+            </summary>
+            <param name="equipmentId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.ShelvesController.ShelevsPositionList(System.String)">
+            <summary>
+            根据货架获取所有点位信息
+            </summary>
+            <param name="shelvesId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.ShelvesController.Add(Wcs.Framework.Model.Models.ShelvesEntity)">
+            <summary>
+            添加
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.ShelvesController.Delete(System.Collections.Generic.List{System.String})">
+            <summary>
+            删除
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.ShelvesController.GetDetailById(System.String)">
+            <summary>
+            单个详情查询
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.ShelvesController.Update(Wcs.Framework.Model.Models.ShelvesEntity)">
+            <summary>
+            修改
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.ShelvesController.InitPointMap">
+            <summary>
+            初始化仓库点位信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.ShelvesController.UpdateShelvesPosition(Wcs.Framework.Model.Models.ShelvesPositionEntity)">
+            <summary>
+            更新货位信息
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Wcs.Framework.ApiMicroservice.Controllers.TaskController.rkType">
+            <summary>
+            入库模式标识
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.ApiMicroservice.Controllers.TaskController.ckType">
+            <summary>
+            出库模式标识
+            </summary>
+        </member>
+        <member name="F:Wcs.Framework.ApiMicroservice.Controllers.TaskController.wcsConsoleServerHost">
+            <summary>
+            执行机IP
+            </summary>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.TaskController.PageList(Wcs.Framework.Model.Models.TaskEntity,Wcs.Framework.Common.Models.PageParModel)">
+            <summary>
+            获取设备任务列表
+            </summary>
+            <param name="entity"></param>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.TaskController.Delete(System.String)">
+            <summary>
+            删除任务
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.TaskController.AutoRkModeStart">
+            <summary>
+            启动一个定时任务,自动入库
+            10秒调用一次
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.TaskController.AutoRkModeStop">
+            <summary>
+            停止任务,停止自动入库
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.TaskController.DealTaskStart">
+            <summary>
+            启动一个定时任务,启动任务处理
+            10秒调用一次
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.TaskController.DealTaskStop">
+            <summary>
+            停止任务,停止执行任务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.TaskController.AllObjects">
+            <summary>
+            获取所有设备对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.TaskController.ManualRkMode(System.String,System.String)">
+            <summary>
+            手工创建入库任务-依赖执行机
+            </summary>
+            <param name="startObject"></param>
+            <param name="endObject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.TaskController.ManualCkMode(System.String,System.String)">
+            <summary>
+            手工创建出库任务-依赖执行机
+            </summary>
+            <param name="startObject"></param>
+            <param name="endObject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.TaskController.GetServerMessages(System.String)">
+            <summary>
+            获取执行机上信息
+            </summary>
+            <param name="type">INFO/ERROR</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.TaskController.TaskStatistics">
+            <summary>
+            任务统计信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.TaskController.InitAllData">
+            <summary>
+            仓库数据初始化
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.TaskController.GetTop3Task">
+            <summary>
+            获取最新的任务执行信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.TaskController.GetEquipmentStatus">
+            <summary>
+            查询可运行设备状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wcs.Framework.ApiMicroservice.Controllers.TaskController.UpdateShelvesPosition(System.String,System.Int32)">
+            <summary>
+            通知执行机更新货位信息
+            </summary>
+            <param name="hwId"></param>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Wcs.Framework.ApiMicroservice": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "applicationUrl": "http://localhost:39459",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

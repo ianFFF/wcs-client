@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="configuration.json" />
+    <None Remove="Log4net.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Log4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Wcs.Framework.Common\Wcs.Framework.Common.csproj" />
+    <ProjectReference Include="..\Wcs.Framework.Interface\Wcs.Framework.Interface.csproj" />
+    <ProjectReference Include="..\Wcs.Framework.WebCore\Wcs.Framework.WebCore.csproj" />
+  </ItemGroup>
+
+</Project>
