@@ -9,7 +9,7 @@ using Wcs.Framework.Model.Models;
 
 namespace Wcs.Framework.Model.SeedData
 {
-    public  class RoleSeed : AbstractSeed<RoleEntity>
+    public class RoleSeed : AbstractSeed<RoleEntity>
     {
         public override List<RoleEntity> GetSeed()
         {
@@ -20,7 +20,7 @@ namespace Wcs.Framework.Model.SeedData
                 RoleCode = "admin",
                 DataScope = DataScopeEnum.ALL.GetHashCode(),
                 OrderNum = 999,
-                Remark ="管理员",
+                Remark = "管理员",
                 IsDeleted = false
             };
             Entitys.Add(role1);
@@ -36,6 +36,18 @@ namespace Wcs.Framework.Model.SeedData
                 IsDeleted = false
             };
             Entitys.Add(role2);
+
+            RoleEntity role3 = new RoleEntity()
+            {
+                Id = SnowFlakeSingle.Instance.NextId(),
+                RoleName = "wcs管理员",
+                RoleCode = "wcsadmin",
+                DataScope = DataScopeEnum.ALL.GetHashCode(),
+                OrderNum = 2,
+                Remark = "wcs管理员",
+                IsDeleted = false
+            };
+            Entitys.Add(role3);
 
             return Entitys;
         }

@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1704.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wcs-console-server", "wcs-console-server\wcs-console-server.csproj", "{627C76F5-42EA-4A25-99B9-8CE8BFADE3BD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "解决方案项", "解决方案项", "{9B2177C2-1164-4554-ACAD-174AFCCD88AC}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wcs.webapi", "wcs.webapi\wcs.webapi.csproj", "{5C37C32F-7D7F-4F46-9705-7521507EC6E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wcs.core", "wcs.core\wcs.core.csproj", "{8A515B79-3471-4925-B1C4-E6D92120947D}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{DE2DE0BC-33DD-4EA3-B6B4-8E55E382B61E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{627C76F5-42EA-4A25-99B9-8CE8BFADE3BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{627C76F5-42EA-4A25-99B9-8CE8BFADE3BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{627C76F5-42EA-4A25-99B9-8CE8BFADE3BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{627C76F5-42EA-4A25-99B9-8CE8BFADE3BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C37C32F-7D7F-4F46-9705-7521507EC6E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C37C32F-7D7F-4F46-9705-7521507EC6E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C37C32F-7D7F-4F46-9705-7521507EC6E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C37C32F-7D7F-4F46-9705-7521507EC6E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A515B79-3471-4925-B1C4-E6D92120947D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A515B79-3471-4925-B1C4-E6D92120947D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A515B79-3471-4925-B1C4-E6D92120947D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A515B79-3471-4925-B1C4-E6D92120947D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE2DE0BC-33DD-4EA3-B6B4-8E55E382B61E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE2DE0BC-33DD-4EA3-B6B4-8E55E382B61E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE2DE0BC-33DD-4EA3-B6B4-8E55E382B61E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE2DE0BC-33DD-4EA3-B6B4-8E55E382B61E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {782263B3-4E55-400C-BF6B-25B8B81FC540}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
+	EndGlobalSection
+EndGlobal

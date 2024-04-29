@@ -29,6 +29,11 @@ namespace Wcs.Framework.WebCore.DbExtend
             var dictinfos = SeedFactory.GetDictionaryInfoSeed();
             var depts = SeedFactory.GetDeptSeed();
             var files = SeedFactory.GetFileSeed();
+
+            var equipmentType = SeedFactory.GetEquipmentTypeSeed();
+            var taskType = SeedFactory.GetTaskTypeSeed();
+            var wareHouse = SeedFactory.GetWareHouseSeed();
+            var equipment = SeedFactory.GetEquipmentSeed();
             try
             {
                 _Db.AsTenant().BeginTran();
@@ -80,6 +85,26 @@ namespace Wcs.Framework.WebCore.DbExtend
                     _Db.Insertable(files).ExecuteCommand();
                 }
 
+                if (!_Db.Queryable<EquipmentTypeEntity>().Any())
+                {
+                    _Db.Insertable(equipmentType).ExecuteCommand();
+                }
+
+                if (!_Db.Queryable<TaskTypeEntity>().Any())
+                {
+                    _Db.Insertable(taskType).ExecuteCommand();
+                }
+
+                if (!_Db.Queryable<WarehouseEntity>().Any())
+                {
+                    _Db.Insertable(wareHouse).ExecuteCommand();
+                }
+
+                if (!_Db.Queryable<EquipmentEntity>().Any())
+                {
+                    _Db.Insertable(equipment).ExecuteCommand();
+                }
+
                 _Db.AsTenant().CommitTran();
                 res = true;
             }
@@ -106,7 +131,7 @@ namespace Wcs.Framework.WebCore.DbExtend
             {
                 //扫描如果存在SugarTable特性 并且 不是分表模型，直接codefirst
                 if (t.GetCustomAttributes(false).Any(a => a.GetType().Equals(typeof(SugarTable))
-                && !t.GetCustomAttributes(false).Any(a=>a.GetType().Equals(typeof(SplitTableAttribute)))))
+                && !t.GetCustomAttributes(false).Any(a => a.GetType().Equals(typeof(SplitTableAttribute)))))
                 {
                     _Db.CodeFirst.SetStringDefaultLength(200).InitTables(t);//这样一个表就能成功创建了
                 }

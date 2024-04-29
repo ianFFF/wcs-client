@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  wcs-console-server:
+    image: ${DOCKER_REGISTRY-}wcsconsoleserver
+    build:
+      context: .
+      dockerfile: wcs-console-server/Dockerfile

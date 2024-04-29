@@ -182,26 +182,6 @@ namespace Wcs.Framework.Model.SeedData
             };
             Entitys.Add(articleRemove);
 
-
-
-
-
-            //Yi框架
-            MenuEntity guide = new MenuEntity()
-            {
-                Id = SnowFlakeSingle.Instance.NextId(),
-                MenuName = "Yi框架",
-                MenuType = MenuTypeEnum.Catalogue.GetHashCode(),
-                Router = "https://gitee.com/ccnetcore/yi",
-                IsShow = true,
-                IsLink = true,
-                MenuIcon = "guide",
-                OrderNum = 90,
-                ParentId = 0,
-                IsDeleted = false,
-            };
-            Entitys.Add(guide);
-
             //用户管理
             MenuEntity user = new MenuEntity()
             {
@@ -404,7 +384,7 @@ namespace Wcs.Framework.Model.SeedData
                 IsDeleted = false
             };
             Entitys.Add(menuRemove);
-  
+
             //部门管理
             MenuEntity dept = new MenuEntity()
             {
@@ -676,9 +656,6 @@ namespace Wcs.Framework.Model.SeedData
             };
             Entitys.Add(configRemove);
 
-
-
-
             //日志管理
             MenuEntity log = new MenuEntity()
             {
@@ -781,6 +758,274 @@ namespace Wcs.Framework.Model.SeedData
                 IsDeleted = false
             };
             Entitys.Add(loginLogRemove);
+
+            // 仓库管理
+            MenuEntity WareHouse = new MenuEntity()
+            {
+                Id = SnowFlakeSingle.Instance.NextId(),
+                MenuName = "仓库管理",
+                MenuType = MenuTypeEnum.Catalogue.GetHashCode(),
+                Router = "/wrehouse",
+                PermissionCode = "wcs:wrehouse",
+                IsShow = true,
+                IsLink = false,
+                MenuIcon = "system",
+                OrderNum = 6,
+                ParentId = 0,
+                IsDeleted = false
+            };
+            Entitys.Add(WareHouse);
+
+            // 设备台账
+            MenuEntity WareHouseEquipment = new MenuEntity()
+            {
+                Id = SnowFlakeSingle.Instance.NextId(),
+                MenuName = "设备台账",
+                MenuType = MenuTypeEnum.Menu.GetHashCode(),
+                Router = "equipment",
+                PermissionCode = "wcs:wrehouse:equipment",
+                IsShow = true,
+                IsLink = false,
+                MenuIcon = "system",
+                Component = "WareHouseEquipment",
+                OrderNum = 4,
+                ParentId = WareHouse.Id,
+                IsDeleted = false
+            };
+            Entitys.Add(WareHouseEquipment);
+
+            // 货架台账
+            MenuEntity WareHouseShelves = new MenuEntity()
+            {
+                Id = SnowFlakeSingle.Instance.NextId(),
+                MenuName = "货架台账",
+                MenuType = MenuTypeEnum.Menu.GetHashCode(),
+                Router = "shelves",
+                PermissionCode = "wcs:wrehouse:shelves",
+                IsShow = true,
+                IsLink = false,
+                MenuIcon = "system",
+                Component = "WareHouseShelves",
+                OrderNum = 3,
+                ParentId = WareHouse.Id,
+                IsDeleted = false
+            };
+            Entitys.Add(WareHouseShelves);
+
+            // 任务管理
+            //MenuEntity WareHouseTask = new MenuEntity()
+            //{
+            //    Id = SnowFlakeSingle.Instance.NextId(),
+            //    MenuName = "任务管理",
+            //    MenuType = MenuTypeEnum.Menu.GetHashCode(),
+            //    Router = "task",
+            //    PermissionCode = "wcs:wrehouse:task",
+            //    IsShow = true,
+            //    IsLink = false,
+            //    MenuIcon = "system",
+            //    Component = "WareHouseTask",
+            //    OrderNum = 2,
+            //    ParentId = WareHouse.Id,
+            //    IsDeleted = false
+            //};
+            //Entitys.Add(WareHouseTask);
+
+            // 日志管理
+            MenuEntity WareHouseLogs = new MenuEntity()
+            {
+                Id = SnowFlakeSingle.Instance.NextId(),
+                MenuName = "日志管理",
+                MenuType = MenuTypeEnum.Menu.GetHashCode(),
+                Router = "logs",
+                PermissionCode = "wcs:wrehouse:logs",
+                IsShow = true,
+                IsLink = false,
+                MenuIcon = "system",
+                Component = "WareHouseLogs",
+                OrderNum = 1,
+                ParentId = WareHouse.Id,
+                IsDeleted = false
+            };
+            Entitys.Add(WareHouseLogs);
+
+            // 异常管理
+            MenuEntity WareHouseAlarm = new MenuEntity()
+            {
+                Id = SnowFlakeSingle.Instance.NextId(),
+                MenuName = "异常管理",
+                MenuType = MenuTypeEnum.Menu.GetHashCode(),
+                Router = "alarm",
+                PermissionCode = "wcs:wrehouse:alarm",
+                IsShow = true,
+                IsLink = false,
+                MenuIcon = "system",
+                Component = "WareHouseAlarm",
+                OrderNum = 0,
+                ParentId = WareHouse.Id,
+                IsDeleted = false
+            };
+            Entitys.Add(WareHouseAlarm);
+
+            // 设备任务
+            MenuEntity EquipmentTask = new MenuEntity()
+            {
+                Id = SnowFlakeSingle.Instance.NextId(),
+                MenuName = "设备任务",
+                MenuType = MenuTypeEnum.Catalogue.GetHashCode(),
+                Router = "/equipmenttask",
+                PermissionCode = "wcs:equipmenttask",
+                IsShow = true,
+                IsLink = false,
+                MenuIcon = "system",
+                OrderNum = 5,
+                ParentId = 0,
+                IsDeleted = false
+            };
+            Entitys.Add(EquipmentTask);
+
+            // 任务台账
+            MenuEntity EquipmentTaskEvents = new MenuEntity()
+            {
+                Id = SnowFlakeSingle.Instance.NextId(),
+                MenuName = "任务台账",
+                MenuType = MenuTypeEnum.Menu.GetHashCode(),
+                Router = "events",
+                PermissionCode = "wcs:equipmenttask:events",
+                IsShow = true,
+                IsLink = false,
+                MenuIcon = "system",
+                Component = "EquipmentTaskEvents",
+                OrderNum = 1,
+                ParentId = EquipmentTask.Id,
+                IsDeleted = false
+            };
+            Entitys.Add(EquipmentTaskEvents);
+
+            // 设备操作
+            MenuEntity EquipmentTaskActions = new MenuEntity()
+            {
+                Id = SnowFlakeSingle.Instance.NextId(),
+                MenuName = "任务台账",
+                MenuType = MenuTypeEnum.Menu.GetHashCode(),
+                Router = "actions",
+                PermissionCode = "wcs:equipmenttask:actions",
+                IsShow = true,
+                IsLink = false,
+                MenuIcon = "system",
+                Component = "EquipmentTaskActions",
+                OrderNum = 0,
+                ParentId = EquipmentTask.Id,
+                IsDeleted = false
+            };
+            Entitys.Add(EquipmentTaskActions);
+
+            // 告警通知
+            MenuEntity Notice = new MenuEntity()
+            {
+                Id = SnowFlakeSingle.Instance.NextId(),
+                MenuName = "告警通知",
+                MenuType = MenuTypeEnum.Catalogue.GetHashCode(),
+                Router = "/notice",
+                PermissionCode = "wcs:notice",
+                IsShow = true,
+                IsLink = false,
+                MenuIcon = "system",
+                OrderNum = 4,
+                ParentId = 0,
+                IsDeleted = false
+            };
+            Entitys.Add(Notice);
+
+            // 设备告警
+            MenuEntity NoticeEquipment = new MenuEntity()
+            {
+                Id = SnowFlakeSingle.Instance.NextId(),
+                MenuName = "设备告警",
+                MenuType = MenuTypeEnum.Menu.GetHashCode(),
+                Router = "equipment",
+                PermissionCode = "wcs:notice:equipment",
+                IsShow = true,
+                IsLink = false,
+                MenuIcon = "system",
+                Component = "NoticeEquipment",
+                OrderNum = 0,
+                ParentId = Notice.Id,
+                IsDeleted = false
+            };
+            Entitys.Add(NoticeEquipment);
+
+            // 大屏
+            MenuEntity Screen = new MenuEntity()
+            {
+                Id = SnowFlakeSingle.Instance.NextId(),
+                MenuName = "大屏",
+                MenuType = MenuTypeEnum.Menu.GetHashCode(),
+                Router = "/screen",
+                PermissionCode = "wcs:screen",
+                IsShow = true,
+                IsLink = false,
+                MenuIcon = "system",
+                Component = "Screen",
+                OrderNum = 3,
+                ParentId = 0,
+                IsDeleted = false
+            };
+            Entitys.Add(Screen);
+
+            // 运行日志
+            MenuEntity LogsRunning = new MenuEntity()
+            {
+                Id = SnowFlakeSingle.Instance.NextId(),
+                MenuName = "运行日志",
+                MenuType = MenuTypeEnum.Menu.GetHashCode(),
+                Router = "/logs_running",
+                PermissionCode = "wcs:logs:running",
+                IsShow = true,
+                IsLink = false,
+                MenuIcon = "system",
+                Component = "LogsRunning",
+                OrderNum = 2,
+                ParentId = 0,
+                IsDeleted = false
+            };
+            Entitys.Add(LogsRunning);
+
+            // 故障日志
+            MenuEntity LogsError = new MenuEntity()
+            {
+                Id = SnowFlakeSingle.Instance.NextId(),
+                MenuName = "故障日志",
+                MenuType = MenuTypeEnum.Menu.GetHashCode(),
+                Router = "/logs_error",
+                PermissionCode = "wcs:logs:error",
+                IsShow = true,
+                IsLink = false,
+                MenuIcon = "system",
+                Component = "LogsError",
+                OrderNum = 1,
+                ParentId = 0,
+                IsDeleted = false
+            };
+            Entitys.Add(LogsError);
+
+            // 模拟操作
+            MenuEntity wcsDemo = new MenuEntity()
+            {
+                Id = SnowFlakeSingle.Instance.NextId(),
+                MenuName = "模拟操作",
+                MenuType = MenuTypeEnum.Menu.GetHashCode(),
+                Router = "/demo",
+                PermissionCode = "wcs:demo",
+                IsShow = true,
+                IsLink = false,
+                MenuIcon = "system",
+                Component = "Demo",
+                OrderNum = 0,
+                ParentId = 0,
+                IsDeleted = false
+            };
+            Entitys.Add(wcsDemo);
+
             return Entitys;
         }
     }

@@ -45,6 +45,27 @@ namespace Wcs.Framework.Model.SeedData
         {
             return new FileSeed().GetSeed();
         }
+
+        public static List<EquipmentTypeEntity> GetEquipmentTypeSeed()
+        {
+            return new WcsEquipmentTypeSeed().GetSeed();
+        }
+
+        public static List<TaskTypeEntity> GetTaskTypeSeed()
+        {
+            return new WcsTaskTypeSeed().GetSeed();
+        }
+
+        public static List<WarehouseEntity> GetWareHouseSeed()
+        {
+            return new WcsWareHouseSeed().GetSeed();
+        }
+
+        public static List<EquipmentEntity> GetEquipmentSeed()
+        {
+            return new WcsEquipmentSeed().GetSeed();
+        }
+
         public static List<UserRoleEntity> GetUserRoleSeed(List<UserEntity> users, List<RoleEntity> roles)
         {
             List<UserRoleEntity> userRoleEntities = new();
@@ -52,7 +73,22 @@ namespace Wcs.Framework.Model.SeedData
             {
                 foreach (var r in roles)
                 {
-                    userRoleEntities.Add(new UserRoleEntity() {Id= SnowFlakeSingle.Instance.NextId(),UserId = u.Id, RoleId = r.Id, IsDeleted = false });
+                    if (r.RoleCode == "wcsadmin")
+                    {
+                        if (u.UserName == "wcs")
+                        {
+                            userRoleEntities.Add(new UserRoleEntity() { Id = SnowFlakeSingle.Instance.NextId(), UserId = u.Id, RoleId = r.Id, IsDeleted = false });
+                        }
+
+                        continue;
+                    }
+
+                    if (u.UserName == "wcs")
+                    {
+                        continue;
+                    }
+
+                    userRoleEntities.Add(new UserRoleEntity() { Id = SnowFlakeSingle.Instance.NextId(), UserId = u.Id, RoleId = r.Id, IsDeleted = false });
                 }
             }
             return userRoleEntities;
@@ -65,6 +101,21 @@ namespace Wcs.Framework.Model.SeedData
             {
                 foreach (var m in menus)
                 {
+                    if (!String.IsNullOrEmpty(m.PermissionCode) && m.PermissionCode.Contains("wcs"))
+                    {
+                        if (r.RoleCode == "wcsadmin")
+                        {
+                            roleMenuEntities.Add(new RoleMenuEntity() { Id = SnowFlakeSingle.Instance.NextId(), RoleId = r.Id, MenuId = m.Id, IsDeleted = false });
+                        }
+
+                        continue;
+                    }
+
+                    if (r.RoleCode == "wcsadmin")
+                    {
+                        continue;
+                    }
+
                     roleMenuEntities.Add(new RoleMenuEntity() { Id = SnowFlakeSingle.Instance.NextId(), RoleId = r.Id, MenuId = m.Id, IsDeleted = false });
                 }
             }

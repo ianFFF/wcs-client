@@ -20,7 +20,7 @@
           <a-icon slot="prefix" type="lock" :style="{ color: 'rgba(0,0,0,.25)' }" />
         </a-input-password>
       </a-form-model-item>
-      <a-row :gutter="16" v-if="captchaEnabled">
+      <!-- <a-row :gutter="16" v-if="captchaEnabled">
         <a-col class="gutter-row" :span="16">
           <a-form-model-item prop="code">
             <a-input v-model="form.code" size="large" type="text" autocomplete="off" placeholder="验证码">
@@ -31,7 +31,7 @@
         <a-col class="gutter-row" :span="8">
           <img class="getCaptcha" :src="codeUrl" @click="getCode" />
         </a-col>
-      </a-row>
+      </a-row> -->
       <a-form-model-item prop="rememberMe">
         <a-checkbox :checked="form.rememberMe" @change="rememberMe">记住密码</a-checkbox>
       </a-form-model-item>
@@ -74,7 +74,7 @@ export default {
       isLoginError: false,
       loginErrorInfo: '',
       form: {
-        username: 'fanwdwcs',
+        username: 'wcs',
         password: '123456',
         code: '1',
         uuid: '',
